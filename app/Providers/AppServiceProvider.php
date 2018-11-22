@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Observers\UserObserver;
+use App\User;
 use Illuminate\Support\ServiceProvider;
-
+use Laravel\Nova\Nova;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -13,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+       User::observe(UserObserver::class);
     }
 
     /**
