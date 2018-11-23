@@ -48,7 +48,7 @@ class Post extends Resource
             ID::make()->sortable(),
 
             BelongsTo::make('User'),
-            
+
             Text::make('Title'),
             Textarea::make('Body'),
 
